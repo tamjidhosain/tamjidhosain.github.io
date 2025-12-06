@@ -1,0 +1,7 @@
+// Update the typewriter roles
+const roles = [
+    'Business Analyst',
+    'Digital Marketing Specialist',
+    'Data-Driven Problem Solver',
+    'AI & ML Enthusiast'
+];
