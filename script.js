@@ -149,47 +149,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===================================
-// Contact Form Handling
+// Contact Form Handling with Web3Forms
 // ===================================
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
 
-    // Basic validation
-    if (!name || !email || !subject || !message) {
-        alert('Please fill in all fields');
-        return;
+    try {
+        const formData = new FormData(contactForm);
+        
+        // Send form data to Web3Forms
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Success message
+            const name = formData.get('name');
+            alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon! ✉️`);
+            
+            // Reset form
+            contactForm.reset();
+        } else {
+            // Error from Web3Forms
+            alert('Oops! Something went wrong. Please try again or email me directly at tamjidhosain02@gmail.com');
+            console.error('Form submission error:', data);
+        }
+    } catch (error) {
+        // Network or other errors
+        alert('Oops! Something went wrong. Please try again or email me directly at tamjidhosain02@gmail.com');
+        console.error('Form submission error:', error);
+    } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
     }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    // In a real application, you would send this data to a server
-    // For now, we'll just show a success message
-    alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon!`);
-
-    // Reset form
-    contactForm.reset();
-
-    // You can integrate with email services like EmailJS, FormSpree, or your own backend
-    // Example with EmailJS:
-    // emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-    //     from_name: name,
-    //     from_email: email,
-    //     subject: subject,
-    //     message: message
-    // });
 });
 
 // ===================================

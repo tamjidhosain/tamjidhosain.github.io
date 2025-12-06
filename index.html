@@ -496,7 +496,15 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key - Replace YOUR_ACCESS_KEY_HERE with your actual key -->
+                    <input type="hidden" name="access_key" value="b8404d29-49db-426f-a04c-579a36421a94">
+
+                    <!-- Optional: Redirect after successful submission -->
+                    <input type="hidden" name="redirect" value="false">
+
+                    <!-- Optional: Custom subject line in email -->
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Your Name">
