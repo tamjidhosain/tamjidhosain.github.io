@@ -13,35 +13,35 @@
     --warning-orange: #F59E0B;
     --danger-red: #EF4444;
     --neutral-gray: #6B7280;
-    
+
     /* Background Colors */
     --bg-primary: #0F172A;
     --bg-secondary: #1E293B;
     --bg-card: rgba(255, 255, 255, 0.05);
     --bg-card-hover: rgba(255, 255, 255, 0.08);
-    
+
     /* Text Colors */
     --text-primary: #F8FAFC;
     --text-secondary: #CBD5E1;
     --text-muted: #94A3B8;
-    
+
     /* Glass effect */
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -198,24 +198,31 @@ body {
 .filter-select {
     width: 100%;
     padding: 0.75rem 1rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--glass-border);
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
     border-radius: var(--radius-sm);
-    color: var(--text-primary);
+    color: #000000;
     font-size: 0.938rem;
     cursor: pointer;
     transition: all var(--transition-fast);
 }
 
+.filter-select option {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 0.5rem;
+}
+
 .filter-select:hover {
     border-color: var(--primary-blue);
-    background: var(--bg-card);
+    background: #FFFFFF;
 }
 
 .filter-select:focus {
     outline: none;
     border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.1);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.2);
 }
 
 .btn-reset {
@@ -415,6 +422,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -428,12 +436,29 @@ body {
 }
 
 /* Stagger animation for cards */
-.kpi-card:nth-child(1) { animation-delay: 0.1s; }
-.kpi-card:nth-child(2) { animation-delay: 0.2s; }
-.kpi-card:nth-child(3) { animation-delay: 0.3s; }
-.kpi-card:nth-child(4) { animation-delay: 0.4s; }
-.kpi-card:nth-child(5) { animation-delay: 0.5s; }
-.kpi-card:nth-child(6) { animation-delay: 0.6s; }
+.kpi-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.kpi-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.kpi-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.kpi-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.kpi-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.kpi-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
 
 /* ===== LOADING STATE ===== */
 .loading {
@@ -451,8 +476,15 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* ===== SCROLLBAR STYLING ===== */
