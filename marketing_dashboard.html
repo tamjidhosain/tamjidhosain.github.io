@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Campaign Analytics Dashboard</title>
+    <link rel="stylesheet" href="marketing_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="container">
+            <h1>📊 Marketing Campaign Analytics Dashboard</h1>
+            <p class="subtitle">Business Analyst Performance Insights</p>
+        </div>
+    </header>
+
+    <!-- KPI Cards Section -->
+    <section class="kpi-section">
+        <div class="container">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Total Customers</p>
+                        <h2 class="kpi-value" id="totalCustomers">-</h2>
+                        <span class="kpi-change positive">Active</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Total Revenue</p>
+                        <h2 class="kpi-value" id="totalRevenue">-</h2>
+                        <span class="kpi-change positive" id="revenueChange">2 Years</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">📈</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">ROAS</p>
+                        <h2 class="kpi-value" id="roas">-</h2>
+                        <span class="kpi-change" id="roasIndicator">Return on Ad Spend</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">💵</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Customer LTV</p>
+                        <h2 class="kpi-value" id="customerLTV">-</h2>
+                        <span class="kpi-change neutral">Lifetime Value</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">🎯</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Campaign Success</p>
+                        <h2 class="kpi-value" id="campaignSuccess">-</h2>
+                        <span class="kpi-change neutral">All Campaigns</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">🛒</div>
+                    <div class="kpi-content">
+                        <p class="kpi-label">Avg Order Value</p>
+                        <h2 class="kpi-value" id="avgOrderValue">-</h2>
+                        <span class="kpi-change neutral">Per Purchase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="countryFilter">🌍 Country</label>
+                    <select id="countryFilter" class="filter-select">
+                        <option value="all">All Countries</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="educationFilter">🎓 Education</label>
+                    <select id="educationFilter" class="filter-select">
+                        <option value="all">All Levels</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="segmentFilter">💎 Segment</label>
+                    <select id="segmentFilter" class="filter-select">
+                        <option value="all">All Segments</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button id="resetFilters" class="btn-reset">🔄 Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Charts Section -->
+    <section class="charts-section">
+        <div class="container">
+            <!-- Row 1: Campaign Performance & Customer Segmentation -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Campaign Performance Comparison</h3>
+                    <p class="chart-description">Acceptance rates across all marketing campaigns</p>
+                    <div class="chart-container">
+                        <canvas id="campaignChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Customer Value Segmentation</h3>
+                    <p class="chart-description">Distribution by spending tier</p>
+                    <div class="chart-container">
+                        <canvas id="segmentationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Purchase Channels & Product Categories -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Purchase Channel Mix</h3>
+                    <p class="chart-description">Revenue distribution by channel</p>
+                    <div class="chart-container">
+                        <canvas id="channelChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Product Category Revenue</h3>
+                    <p class="chart-description">Performance by product line</p>
+                    <div class="chart-container">
+                        <canvas id="productChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Income vs Spending & Geographic Distribution  -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Income vs Spending Analysis</h3>
+                    <p class="chart-description">Customer value correlation</p>
+                    <div class="chart-container">
+                        <canvas id="scatterChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Geographic Distribution</h3>
+                    <p class="chart-description">Customers by country</p>
+                    <div class="chart-container">
+                        <canvas id="geoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Education Distribution & Monthly Trends -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Education Level Distribution</h3>
+                    <p class="chart-description">Demographics breakdown</p>
+                    <div class="chart-container">
+                        <canvas id="educationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Customer Acquisition Trend</h3>
+                    <p class="chart-description">Monthly enrollment over time</p>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights-section">
+        <div class="container">
+            <h2>Key Insights & Recommendations</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h4>🎯 Top Performing Campaign</h4>
+                    <p id="topCampaign">Loading...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>💎 Most Valuable Segment</h4>
+                    <p id="topSegment">Loading...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>🛒 Primary Channel</h4>
+                    <p id="topChannel">Loading...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>📦 Best Selling Category</h4>
+                    <p id="topProduct">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="container">
+            <p>&copy; 2025 Marketing Analytics Dashboard | Built for Business Analyst Role | Data-Driven Insights</p>
+        </div>
+    </footer>
+
+    <!-- Load Dashboard Script -->
+    <script src="marketing_dashboard.js"></script>
+</body>
+
+</html>
