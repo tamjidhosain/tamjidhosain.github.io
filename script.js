@@ -66,13 +66,8 @@ window.addEventListener('scroll', highlightNavigation);
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(30, 35, 64, 0.7)';
-        navbar.style.boxShadow = 'none';
-    }
+    // Keep navbar color the same throughout scrolling
+    // No changes needed
 });
 
 // ===================================
