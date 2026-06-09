@@ -75,9 +75,9 @@ window.addEventListener('scroll', () => {
 // ===================================
 const typewriterElement = document.getElementById('typewriter');
 const roles = [
+    'Marketing Specialist',
     'Business Analyst',
-    'Digital Marketing Specialist',
-    'Data-Driven Problem Solver',
+    'Data-Driven Strategist',
     'AI & ML Enthusiast'
 ];
 
