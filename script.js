@@ -135,7 +135,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for fade-in animation
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
-        '.skill-category, .project-card, .timeline-item, .education-card, .stat-item'
+        '.skill-category, .project-card, .timeline-item, .education-card, .stat-item, .article-card'
     );
 
     animatedElements.forEach(el => {

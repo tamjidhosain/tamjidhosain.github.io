@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -29,6 +29,7 @@
                 <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#experience" class="nav-link">Experience</a>
+                <a href="#articles" class="nav-link">Articles</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -128,17 +129,17 @@
                         &mdash; with work focused on participatory design and assistive technology for children with autism.
                     </p>
                     <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>21.4K+</h4>
-                            <p>Leads Generated</p>
+                        <div class="stat-card">
+                            <div class="stat-number">21.4K+</div>
+                            <div class="stat-label">Leads Generated</div>
                         </div>
-                        <div class="stat-item">
-                            <h4>146M</h4>
-                            <p>Content Views</p>
+                        <div class="stat-card">
+                            <div class="stat-number">146M</div>
+                            <div class="stat-label">Content Views</div>
                         </div>
-                        <div class="stat-item">
-                            <h4>2</h4>
-                            <p>Research Papers</p>
+                        <div class="stat-card">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Research Papers</div>
                         </div>
                     </div>
                 </div>
@@ -234,7 +235,6 @@
         </div>
     </section>
 
-
     <!-- Certifications Section -->
     <section id="certifications" class="certifications">
         <div class="container">
@@ -246,7 +246,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <embed src="Digital Marketing Certificate.pdf" type="application/pdf"
-                            alt="Google Digital Marketing Certificate" style="width: 100%; height: 100%; border: none;">
+                            alt="Google Digital Marketing Certificate">
                         <span class="certification-badge">2025</span>
                     </div>
                     <div class="certification-content">
@@ -261,15 +261,25 @@
                             and marketing performance measurement.
                         </p>
                         <div class="certification-links">
-                            <a href="Digital Marketing Certificate.pdf" class="cert-btn" target="_blank">📄 View PDF</a>
-                            <a href="https://coursera.org/verify/GEP9Z86JE0IW" class="cert-btn" target="_blank">✓ Verify</a>
+                            <a href="Digital Marketing Certificate.pdf" class="cert-btn" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                                View PDF
+                            </a>
+                            <a href="https://coursera.org/verify/GEP9Z86JE0IW" class="cert-btn" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Verify
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="certification-card">
                     <div class="certification-image">
                         <embed src="Power BI Certificate.pdf" type="application/pdf"
-                            alt="Power BI Certificate" style="width: 100%; height: 100%; border: none;">
+                            alt="Power BI Certificate">
                         <span class="certification-badge">2025</span>
                     </div>
                     <div class="certification-content">
@@ -280,8 +290,18 @@
                             Advanced certification in Power BI demonstrating expertise in data visualization, business intelligence, and analytical reporting. Proficient in creating interactive dashboards, DAX formulas, data modeling, and connecting multiple data sources. Proven ability to translate complex data into actionable business insights and support data-driven decision-making strategies.
                         </p>
                         <div class="certification-links">
-                            <a href="Power BI Certificate.pdf" class="cert-btn" target="_blank">📄 View PDF</a>
-                            <a href="https://coursera.org/share/2813f4d6709481e34b3c58c5f58a14d7" class="cert-btn" target="_blank">✓ Verify</a>
+                            <a href="Power BI Certificate.pdf" class="cert-btn" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                                </svg>
+                                View PDF
+                            </a>
+                            <a href="https://coursera.org/share/2813f4d6709481e34b3c58c5f58a14d7" class="cert-btn" target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                Verify
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -300,7 +320,7 @@
                 <!-- Marketing Campaign Analytics Dashboard -->
                 <div class="project-card">
                     <div class="project-image"
-                        style="background: linear-gradient(135deg, #2E5BFF 0%, #8B5CF6 100%); display: flex; align-items: center; justify-content: center; min-height: 250px;">
+                        style="background: linear-gradient(135deg, #2E5BFF 0%, #8B5CF6 100%); display: flex; align-items: center; justify-content: center; min-height: 250px; position: relative;">
                         <div style="text-align: center; color: white; padding: 2rem;">
                             <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
                             <h4 style="font-size: 1.5rem; margin: 0;">Marketing Analytics</h4>
@@ -322,7 +342,7 @@
                             Chart.js visualizations. Tracks campaign performance, ROAS (60.4x), customer segmentation,
                             and revenue optimization with real-time filtering.</p>
                         <div class="project-links">
-                            <a href="https://github.com/tamjidhosain" target="_blank" class="project-btn">
+                            <a href="https://github.com/tamjidhosain" target="_blank" class="project-btn" rel="noopener noreferrer">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -356,37 +376,38 @@
                     <div class="timeline-content">
                         <div class="timeline-date">December 2025 - Ongoing</div>
                         <h3>Marketing Specialist</h3>
-                        <h4>Get Levrg</h4>
+                        <p style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: var(--spacing-md);">Get Levrg</p>
                         <p>Leading comprehensive marketing initiatives with focus on automation, lead management, content strategy, and team coordination.</p>
                         
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Marketing Data Management</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Design and execute HubSpot marketing automation workflows, Email Newsletters, and Lead Nurturing campaigns to increase engagement and marketing-qualified leads</li>
                             <li>Manage and segment lead databases using spreadsheets and CRM-style processes; assign and distribute qualified leads to the sales team for follow-up and conversion</li>
                         </ul>
 
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Content & Social Media Strategy</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Plan, schedule, and publish content across Facebook, Instagram, LinkedIn, X, TikTok, and Podbean, ensuring brand consistency and campaign alignment</li>
                         </ul>
 
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Team Management</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Supervise and collaborate with a creative team including a graphic designer, video editor, copywriter, and web developer to deliver digital marketing assets and campaigns</li>
                             <li>Monitor and analyze performance metrics for email, social media, and lead funnels; generate reports and optimize campaigns based on data insights</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2025 - Dec 2025</div>
-                        <h3>Business Analyst</h3>
-                        <h4>FutureEd Corporation Ltd</h4>
+                        <div class="timeline-date">May 2023 - Dec 2024</div>
+                        <h3>Business Analyst & Digital Marketer</h3>
+                        <p style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: var(--spacing-md);">FutureEd Corporation Ltd</p>
                         <p>Leading business analysis and digital marketing initiatives, driving product strategy and revenue growth through data-driven insights.</p>
                         
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Business Analysis & Product Performance Evaluation</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Performed analysis by making dashboards with Power BI and Excel, guiding product and marketing strategy</li>
                             <li>Conducted product and page performance analysis using Power BI; increased visits to 721.3K (+25.8%) and achieved 848.3K reach—higher than industry benchmarks</li>
                             <li>Assessed lead flow and campaign ROAS for 21.4K+ leads; created actionable reports highlighting high-ROI opportunities</li>
@@ -394,53 +415,34 @@
                         </ul>
 
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Digital Marketing Campaign Management</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Generated 21.4K leads (+133.9%), with 161.6% growth in paid conversions; also managed 413 organic leads (+13.7%)</li>
                             <li>Achieved 146M total content views (+146.7%), including 9.6M 3-second views (+129.1%), 1.44M 15-second views (+5.1%), and 73.5K 1-minute views (+300.4%)</li>
                             <li>Managed 63+ campaigns, optimized for CPL and engagement over six months, ranking above the 75th percentile in professional services</li>
                         </ul>
 
                         <h4 style="margin-top: 1rem; color: var(--accent-primary); font-weight: 600;">Communication & Marketing Collaboration</h4>
-                        <ul>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
                             <li>Built lead nurturing playbooks and ran training for sales teams; improved pipeline efficiency and cross-functional workflows</li>
                             <li>Increased audience engagement: 1.3K engaged followers (+93.4%), 2K returning viewers (+644%), and produced audience-specific messaging for launches</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date"> January 2023 - December 2024</div>
+                        <div class="timeline-date">January 2023 - December 2024</div>
                         <h3>Research Assistant</h3>
-                        <h4>NSUHCI-DIAL, North South University</h4>
-                        <p>Conducted qualitative research and developed user-centered applications for accessibility and
-                            assistive technology.</p>
-                        <ul>
-                            <li>Conducted in-depth interviews and focus group discussions with end-users for usability
-                                research</li>
-                            <li>Employed thematic analysis to extract key design insights and inform iterative design
-                                process</li>
+                        <p style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: var(--spacing-md);">NSUHCI-DIAL, North South University</p>
+                        <p>Conducted qualitative research and developed user-centered applications for accessibility and assistive technology.</p>
+                        <ul style="margin: var(--spacing-md) 0; margin-left: var(--spacing-lg); color: var(--text-secondary);">
+                            <li>Conducted in-depth interviews and focus group discussions with end-users for usability research</li>
+                            <li>Employed thematic analysis to extract key design insights and inform iterative design process</li>
                             <li>Developed mobile app using React for communication support for children with autism</li>
-                            <li>Designed web platform for mental health support featuring mood tracking and counseling
-                                advice</li>
-                            <li>Built flash-flood detection device using ESP32 and Arduino with real-time Firebase
-                                integration</li>
+                            <li>Designed web platform for mental health support featuring mood tracking and counseling advice</li>
+                            <li>Built flash-flood detection device using ESP32 and Arduino with real-time Firebase integration</li>
                             <li>Published research papers in CSCW'24 (First Author) and Compass 2024 (Co-Author)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Ongoing</div>
-                        <h3>Co-Founder</h3>
-                        <h4>Shohayota (Non-profit Organization)</h4>
-                        <p>Co-founded a non-profit organization dedicated to bridging acts of kindness with individuals
-                            in need.</p>
-                        <ul>
-                            <li>Led student-driven initiative at North South University</li>
-                            <li>Fostering a more inclusive and compassionate society</li>
-                            <li>Coordinating community outreach programs</li>
                         </ul>
                     </div>
                 </div>
@@ -448,42 +450,31 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <!-- Articles Section -->
+    <section id="articles" class="articles">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">Academic background</p>
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Thoughts on marketing, design, and strategy</p>
             </div>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <h3>Bachelor of Science in Computer Science & Engineering</h3>
-                    <h4>North South University</h4>
-                    <p class="education-date">2020 - 2025</p>
-                    <p class="education-desc">
-                        Major in AI & Machine Learning. Focused on developing expertise in artificial intelligence,
-                        machine learning algorithms, data analysis, and software engineering.
-                    </p>
-                    <div class="education-highlights">
-                        <p><strong>Specialization:</strong> AI & Machine Learning</p>
-                        <p><strong>Relevant Coursework:</strong> Machine Learning, Data Structures, Algorithms, Database
-                            Systems, Software Engineering, Artificial Intelligence, Data Mining</p>
-                        <p><strong>Research:</strong> Published papers in CSCW'24 and Compass 2024</p>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-header">
+                        <h2 class="article-title">How Levi's Turned a Stadium Tarp into Free Marketing</h2>
+                        <p class="article-date">Jan 15, 2025</p>
                     </div>
-                </div>
-                <div class="education-card">
-                    <div class="education-icon">📚</div>
-                    <h3>Higher Secondary Certificate (HSC)</h3>
-                    <h4>Notre Dame College, Dhaka</h4>
-                    <p class="education-date">2019</p>
-                    <p class="education-desc">
-                        Completed higher secondary education with focus on Science stream.
+                    <p class="article-excerpt">
+                        FIFA tried to erase the Levi's logo from a stadium with a white tarp. Instead, the company turned the restriction into one of its best marketing moments. Here's what happened and what marketers can learn from it.
                     </p>
-                    <div class="education-highlights">
-                        <p><strong>Major:</strong> Science</p>
+                    <div class="article-footer">
+                        <a href="article-levis-stadium-tarp.html" class="article-read-more">
+                            <span class="read-label">Read Full Article</span>
+                            <svg class="read-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -525,14 +516,11 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Web3Forms Access Key - Replace YOUR_ACCESS_KEY_HERE with your actual key -->
+                    <!-- Web3Forms Access Key -->
                     <input type="hidden" name="access_key" value="b8404d29-49db-426f-a04c-579a36421a94">
-
-                    <!-- Optional: Redirect after successful submission -->
                     <input type="hidden" name="redirect" value="false">
-
-                    <!-- Optional: Custom subject line in email -->
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Your Name">
